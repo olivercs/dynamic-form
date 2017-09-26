@@ -1,0 +1,15 @@
+@import './scss/mixins/grid-table';
+@import './scss/mixins/grid-inline';
+
+.block {
+  width: 100%;
+  display: block;
+}
+
+.container-col-3 {
+  @include grid-inline('> *', 'fixed', 15px, 15px, 3);
+}
+
+.container-col-2 {
+  @include grid-inline('> *', 'fixed', 10px, 15px);
+}

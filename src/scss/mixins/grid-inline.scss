@@ -1,0 +1,10 @@
+@import 'grid-inline-items';
+
+@mixin grid-inline($selector,  $layout: 'fluid', $gutterH: 15px, $gutterV: 15px, $columns: 2) {
+  display: flex;
+  flex-wrap: wrap;
+  
+  #{$selector} {
+    @include grid-inline-items($layout, $gutterH, $gutterV, $columns);
+  }
+}

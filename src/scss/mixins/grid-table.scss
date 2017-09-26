@@ -1,0 +1,37 @@
+@mixin grid-table($gutterH: 10px, $gutterV: 10px) {
+
+  .row {
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   margin-top: $gutterV / 2;
+   margin-bottom: $gutterV / 2;
+  }
+
+  .col {
+    flex: 1 1;
+    margin-left: $gutterH / 2;
+    margin-right: $gutterH / 2;
+    overflow: hidden;
+
+    &.expand {
+      overflow: visible;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+  @for $i from 1 through 12 {
+    .grow-#{$i}{
+       flex-grow:  $i;
+    }
+  }
+
+}

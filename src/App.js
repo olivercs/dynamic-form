@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import Model from './Model';
 import DynamicForm from './DynamicForm';
 
